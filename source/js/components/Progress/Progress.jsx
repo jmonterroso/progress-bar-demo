@@ -89,12 +89,12 @@ Progress.propTypes = {
   ]),
   children: React.PropTypes.oneOfType([
     React.PropTypes.arrayOf(React.PropTypes.node),
-    React.PropTypes.node
+    React.PropTypes.node,
   ]),
 };
 
-Progress.throwError = function () {
-  return new Error(...arguments);
+Progress.throwError = function (...rest) {
+  return new Error(...rest);
 };
 Progress.defaultProps = defaultProps;
 
