@@ -54,6 +54,7 @@ class Progress extends React.Component {
           )
           }
         </div>
+        {children}
       </div>
     );
   }
