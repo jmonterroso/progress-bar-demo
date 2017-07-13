@@ -20,6 +20,20 @@ https://secure-oasis-72799.herokuapp.com/
 
 ![Screenshot](/marvin.png)
 
+## How to use
+
+#### Configurable Props
+
+- completed(Number/Required): Numeric value defining the completed value
+- target(number/Required): Define the target value to reach.
+- color(String): Define the color for progress bar
+- symbol(String): Symbol to display before the completed and target value. Default: '$'
+- animation(number): Timing of animation defined in milliseconds
+
+```
+ <Progress completed={ 56 } target={ 125 } color='linear-gradient(to bottom, #6bc061 0%,#60ac58 100%)' animation={ 1000 } symbol='$' />
+```
+
 ## Table of contents
 * [Steps to create progress bar](#user-content-steps-to-create-progress-bar)
 * [Features of Progress Bar Component](#user-content-features-of-progress-bar-component)
@@ -59,19 +73,6 @@ https://secure-oasis-72799.herokuapp.com/
 - [x] Boilerplate contains Linting and last version of webpack.
 - [x] Use of component icon helper to display icons in component
 
-## How to use
-
-#### Configurable Props
-
-- completed(Number/Required): Numeric value defining the completed value
-- target(number/Required): Define the target value to reach.
-- color(String): Define the color for progress bar
-- symbol(String): Symbol to display before the completed and target value. Default: '$'
-- animation(number): Timing of animation defined in milliseconds
-
-```
- <Progress completed={ 56 } target={ 125 } color='linear-gradient(to bottom, #6bc061 0%,#60ac58 100%)' animation={ 1000 } symbol='$' />
-```
 ## Setup
 
 Tested with node 6.x and 7.x
