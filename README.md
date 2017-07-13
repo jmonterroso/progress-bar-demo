@@ -1,79 +1,77 @@
 # Progress Bar Demo
+### Progress bar demo for Gorilla Logic test build with React.
 
-Progress bar demo for Gorilla Logic test build with React.
+Based on the following requirements:
+- You product owner sent you an email Monday morning asking you to build a demo of a new progress indicator feature. She attached an image describing the feature to the email (also attached to this question) and asked you to have it ready for a demo with the executive team that afternoon. Unfortunately, the product owner will be out of touch until the meeting, so you'll have to work with the requirements she provided in the attachment.
+- Please create a web page that demonstrates the progress indicator feature and paste a publicly accessible URL that demonstrates that feature into the answer box. Also, list the questions that you would have asked the product manager had she been available prior to the demo and describe any decisions you had to make to finish the demo.
+- And Following screenshot:
 
-This project was created using a boilerplate based on the following git 
+![Screenshot](/gorillalogic.hirevue.png)
 
-![Marvin](/marvin.jpg)
+- This project was created using a boilerplate based on the following git repository
 
-Name comes from a fictional character [Marvin](https://en.wikipedia.org/wiki/Marvin_(character)), android from the [The Hitchhiker's Guide to the Galaxy](https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy) book as a homage to it's author [Douglas Adams](https://en.wikipedia.org/wiki/Douglas_Adams).
+https://github.com/workco/marvin
+
+### Screenshot project deployed
+
+The project demo was released on a heroku server with the following url:
+
+https://secure-oasis-72799.herokuapp.com/
+
+![Screenshot](/marvin.png)
 
 ## Table of contents
-* [What is this?](#user-content-what-is-this)
-* [Features](#user-content-features)
+* [Steps to create progress bar](#user-content-steps-to-create-progress-bar)
+* [Features of Progress Bar Component](#user-content-features-of-progress-bar-component)
+* [How to use](#user-content-how-to-use)
 * [Setup](#user-content-setup)
 * [Running in dev mode](#user-content-running-in-dev-mode)
 * [Build (production)](#user-content-build-production)
 * [Running in preview production mode](#user-content-running-in-preview-production-mode)
 * [Linting](#user-content-linting)
-* [Git hooks](#user-content-git-hooks)
-* [Changelog](#user-content-changelog)
 
 
-## What is this?
 
-Boilerplate for kicking off React/Redux applications.
+## Steps to create progress bar?
 
-It includes complete, minimal react app.
-By complete we mean it has examples for:
+- Clone repository
+- Create stylesheet specific for component `scss/components/progress-bar`
+- Create react component under `components/Progress` directory
+- Define the props to customize the component.
+- Adding base styles to component and page
+- Creating the routes to display the home page.
+- Deploying to Heroku server.
 
-- components (both container/views and regular ones)
-- routes
-- reducers (redux)
-- actions (both sync and async),
-- SASS (with autoprefixer)<sup>1</sup>
-- dummy API
-- using assets (in CSS and components)
-- imports relative to the app root
 
-![Example dashboard](/marvin-screenshot.png)
 
-<sup>1</sup> Using source maps breaks urls in the CSS loader - https://github.com/webpack/css-loader/issues/232. Try [this](https://github.com/webpack/css-loader/issues/232#issuecomment-240449998) to fix it (but it breaks testing from local network).
+## Features of Progress Bar Component
 
-## Features
+- [x] Reusable Component
+- [x] Custom Color.  `Default: #0BD318`
+- [x] Custom animation timing using milliseconds. `Default: 500 ms`
+- [x] Custom symbol to be displayed in component. `Default: $`
+- [x] Required target and complete props values (meaning the current value and the target value to be reached)
+- [x] Validation of existence complete prop and validation of numeric value
+- [x] Validation of target is lower than complete property to avoid in propTypes 
+- [x] Adding success visual state when the progress bar reach the 100% of the target, and displaying the message properly.
+- [x] Animation of the progress bar when page loads.
+- [x] Use of the provided colors in the screenshot.
+- [x] Boilerplate contains Linting and last version of webpack.
+- [x] Use of component icon helper to display icons in component
 
-- [x] React
-- [x] React router
-- [x] Redux
-- [x] Redux Thunk
-- [x] Redux DevTools (you need to have [browser extension](https://github.com/zalmoxisus/redux-devtools-extension) installed)
-- [x] Immutable reducer data
-- [x] Webpack 2 (development and production config)
-- [x] Hot Module Replacement
-- [x] Babel - static props, decorators
-- [x] SASS with autoprefixing
-- [x] Webpack dashboard
-- [x] Linting
-- [x] Included `es6-promise` and `isomorphic-fetch`
-- [x] Preview production build
-- [x] File imports relative to the app root
-- [x] Git hooks - lint before push
+## How to use
 
-## TODO
+#### Configurable Props
 
-- [x] Tree shaking build
-- [ ] Switch to [redux-saga](https://github.com/redux-saga/redux-saga)
-- [ ] Universal rendering
-- [ ] Server async data
-- [ ] Internationalization
+- completed(Number/Required): Numeric value defining the completed value
+- target(number/Required): Define the target value to reach.
+- color(String): Define the color for progress bar
+- symbol(String): Symbol to display before the completed and target value. Default: '$'
+- animation(number): Timing of animation defined in milliseconds
 
-Other nice to have features
-
-- [x] Generating ~~icon font from SVG~~ SVG sprite
-- [ ] Feature detection (Modernizr) (?)
-- [ ] Google analytics (?)
-- [ ] Error reporting (?)
-
+```
+ <Progress completed={ 56 } target={ 125 } color='linear-gradient(to bottom, #6bc061 0%,#60ac58 100%)' animation={ 1000 } symbol='$' />
+```
 ## Setup
 
 Tested with node 6.x and 7.x
@@ -189,60 +187,3 @@ width       // optional, default 24
 height      // optional, default 24
 style       // optional, CSS style object
 ```
-
-
------
-
-## Changelog
-
-#### 0.1.7
-
-* Migrated to React Router 4.x (thanks @shams-ali)
-* Added .editorconfig file
-* Fixed couple of typos
-
-#### 0.1.6
-
-* Added SVG icon loader (SVG sprite) [#18](https://github.com/workco/react-redux-webpack2-boilerplate/pull/18)
-
-#### 0.1.5
-
-* `npm start` is not using `webpack-dashboard` by default cause it still has issues with Windows
-* Moved `prop-types` from `devDependencies` to `dependencies`
-
-#### 0.1.4
-
-* Resolved React 15.5 [deprecation warnings](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html#new-deprecation-warnings)
-
-#### 0.1.3
-
-* Made sure tree shaking is working
-* Removed DevTools from the code, but it still works if you have browser extension
-
-#### 0.1.2
-
-* Fixed duplicating vendor bundle code
-* Reduced overall bundle size by disabling `devtool` in production
-
-#### 0.1.1
-
-* Fixed running it on Windows machines
-
-#### 0.1.0
-
-* Updated `webpack` to a stable version
-
-#### 0.0.3
-
-* Added pre-push git hook
-* Added `preview` task
-
-#### 0.0.2
-
-* Added Redux Dev Tools.
-* Renamed `client` to `source`
-* Made sure `logger` and `DevTools` are loaded only in development
-
-#### 0.0.1
-
-Initial release

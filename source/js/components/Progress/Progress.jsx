@@ -8,6 +8,7 @@ const defaultProps = {
   color: '#0BD318',
   symbol: '$',
   target: 100,
+  animation: 500,
 };
 
 class Progress extends React.Component {
