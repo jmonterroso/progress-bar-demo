@@ -68,6 +68,7 @@ Progress.propTypes = {
     if (props[propName] < 0 || props[propName] > props.target) {
       return Progress.throwError('Invalid Props: "completed" should be lower or equal to target');
     }
+    return 1;
   }),
   target: ((props, propName) => {
     if (typeof props[propName] !== 'number') {
@@ -76,6 +77,7 @@ Progress.propTypes = {
     if (props[propName] < 0 || props[propName] < props.completed) {
       return Progress.throwError('Invalid Props: "target" should be greater than target');
     }
+    return 1;
   }),
   color: PropTypes.string,
   animation: PropTypes.number,
