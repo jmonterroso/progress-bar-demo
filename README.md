@@ -1,10 +1,8 @@
-# Marvin ★★
+# Progress Bar Demo
 
-React and Redux, Webpack 2 boilerplate.
+Progress bar demo for Gorilla Logic test build with React.
 
-Marvin is internal project by [Work & Co](https://work.co).
-We love React and use it a lot. So Marvin is meant to be a starting point for our React projects.
-But as we love open source too, it is publicly available for anyone interested in using it.
+This project was created using a boilerplate based on the following git 
 
 ![Marvin](/marvin.jpg)
 

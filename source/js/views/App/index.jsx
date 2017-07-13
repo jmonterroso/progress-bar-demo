@@ -3,16 +3,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Dashboard from 'views/Dashboard';
-import About from 'views/About';
 import NotFound from 'views/NotFound';
-import Menu from 'components/Global/Menu';
-
 const publicPath = '/';
+const accountPath = '/account';
 
 export const routeCodes = {
-  DASHBOARD: publicPath,
-  ABOUT: `${ publicPath }about`,
+  DASHBOARD: publicPath
 };
+
 
 export default class App extends Component {
   static propTypes = {
@@ -23,11 +21,10 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <Menu />
           <div className='Page'>
             <Switch>
               <Route exact path={ publicPath } component={ Dashboard } />
-              <Route path={ routeCodes.ABOUT } component={ About } />
+              <Route exact path={ accountPath } component={ Dashboard } />
               <Route path='*' component={ NotFound } />
             </Switch>
           </div>

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { testAction, testAsync } from 'actions/app';
-import Icon from 'components/Global/Icon';
-import bookImg from '../../../assets/img/book2.jpg';
+import Progress from 'components/Progress/Progress';
 
 @connect(state => ({
   asyncData: state.app.get('asyncData'),
@@ -49,52 +48,15 @@ export default class Dashboard extends Component {
     } = this.props;
 
     return (
-      <div className='Dashboard'>
-        <h1>Marvin</h1>
-        <p>
-          Boilerplate for kicking off React/Redux applications.
-        </p>
-
-        <hr />
-
-        <h2>Examples</h2>
-
-        <h3>Synchronous action</h3>
-        <div className='Example'>
-          <p>Counter: { counter }</p>
-          <button onClick={ this.handleTestButtonClick }>
-            Increase
-          </button>
-        </div>
-
-        <h3>Async action example</h3>
-        <div className='Example'>
-          { asyncData && <p>{ asyncData }</p> }
-          { asyncLoading && <p>Loading...</p> }
-          { asyncError && <p>Error: { asyncError }</p> }
-          <button
-            disabled={ asyncLoading }
-            onClick={ this.handleAsyncButtonClick }
-          >
-            Get async data
-          </button>
-        </div>
-
-        <h3>Background image</h3>
-        <div className='Example'>
-          <div className='BackgroundImgExample' />
-        </div>
-
-        <h3>Image imported to the component</h3>
-        <div className='Example'>
-          <img src={ bookImg } alt='' className='ImgExample' />
-        </div>
-
-        <h3>SVG sprite icon set</h3>
-        <div className='Example'>
-          <Icon glyph='square' />
-          <Icon glyph='circle' />
-          <Icon glyph='triangle' />
+      <div className='container'>
+        <div className='widget-progress'>
+          <h4 className='widget-progress-title'>Your Progress</h4>
+          <div className='vertical-center'>
+            <Progress
+              completed={ 56 } target={ 125 }
+              color='linear-gradient(to bottom, #6bc061 0%,#60ac58 100%)'
+              animation={ 1000 } symbol='$'
+            /></div>
         </div>
       </div>
     );
