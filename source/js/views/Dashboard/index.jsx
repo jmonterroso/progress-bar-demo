@@ -11,14 +11,6 @@ import Progress from 'components/Progress/Progress';
   counter: state.app.get('counter'),
 }))
 export default class Dashboard extends Component {
-  static propTypes = {
-    asyncData: PropTypes.string,
-    asyncError: PropTypes.object,
-    asyncLoading: PropTypes.bool,
-    counter: PropTypes.number,
-    // from react-redux connect
-    dispatch: PropTypes.func,
-  }
 
   constructor() {
     super();
