@@ -40,12 +40,6 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    const {
-      asyncData,
-      asyncError,
-      asyncLoading,
-      counter,
-    } = this.props;
 
     return (
       <div className='container'>
