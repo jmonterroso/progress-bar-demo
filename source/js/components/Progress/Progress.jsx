@@ -22,7 +22,16 @@ class Progress extends React.Component {
   }
 
   render() {
-    const { color, target, symbol, completed, animation, height, className, children, ...rest } = this.props;
+    const {
+      color,
+      target,
+      symbol,
+      completed,
+      animation,
+      height,
+      className,
+      children,
+      ...rest } = this.props;
     const style = {
       background: color,
       transition: `all ${ animation }ms`,
