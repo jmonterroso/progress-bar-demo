@@ -3,12 +3,6 @@ import { connect } from 'react-redux';
 import { testAction, testAsync } from 'actions/app';
 import Progress from 'components/Progress/Progress';
 
-@connect(state => ({
-  asyncData: state.app.get('asyncData'),
-  asyncError: state.app.get('asyncError'),
-  asyncLoading: state.app.get('asyncLoading'),
-  counter: state.app.get('counter'),
-}))
 export default class Dashboard extends Component {
 
   constructor() {
