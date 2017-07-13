@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
 import { testAction, testAsync } from 'actions/app';
 import Progress from 'components/Progress/Progress';
 
