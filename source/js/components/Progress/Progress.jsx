@@ -85,6 +85,10 @@ Progress.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  children: React.PropTypes.oneOfType([
+    React.PropTypes.arrayOf(React.PropTypes.node),
+    React.PropTypes.node
+  ]),
 };
 
 Progress.throwError = function () {
