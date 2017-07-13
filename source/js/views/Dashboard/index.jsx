@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { testAction, testAsync } from 'actions/app';
 import Progress from 'components/Progress/Progress';
 
 export default class Dashboard extends Component {
@@ -13,7 +11,6 @@ export default class Dashboard extends Component {
   }
 
   render() {
-
     return (
       <div className='container'>
         <div className='widget-progress'>
