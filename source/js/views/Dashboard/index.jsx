@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Progress from 'components/Progress/Progress';
 
 export default class Dashboard extends Component {
-
   constructor() {
     super();
 
