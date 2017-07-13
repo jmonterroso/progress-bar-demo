@@ -44,10 +44,16 @@ class Progress extends React.Component {
           <div className='progress-reached'>Reached:</div>
           <div className={ className || 'progress' } { ...rest }>
             <div className='progress-bar' ref={ (p) => { this.progressBar = p; } } style={ style }>
-              <div className='progress-current-value'>
-                <Icon height='10px' glyph='caret-up' />
-                <span>{symbol}{completed}</span>
-              </div>
+              {(completed === target) ?
+                null
+                :
+                <div className='progress-current-value'>
+
+                  <Icon height='10px' glyph='caret-up' />
+                  <span>{symbol}{completed}</span>
+                </div>
+              }
+
             </div>
           </div>
 

@@ -12,12 +12,16 @@ Based on the following requirements:
 
 https://github.com/workco/marvin
 
-### Screenshot project deployed
+### Screenshots from project deployed
 
 The project demo was released on a heroku server with the following url:
 
+
 https://secure-oasis-72799.herokuapp.com/
 
+### Target Reached
+![Screenshot](/target-reached-screenshot.png)
+### When the target is not reached
 ![Screenshot](/marvin.png)
 
 ## How to use
