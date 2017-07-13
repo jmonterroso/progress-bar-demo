@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 import Dashboard from 'views/Dashboard';
 import NotFound from 'views/NotFound';
+
 const publicPath = '/';
 const accountPath = '/account';
 
 export const routeCodes = {
-  DASHBOARD: publicPath
+  DASHBOARD: publicPath,
 };
 
 
