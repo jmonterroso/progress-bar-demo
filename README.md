@@ -19,9 +19,9 @@ The project demo was released on a heroku server with the following url:
 
 https://secure-oasis-72799.herokuapp.com/
 
-### Target Reached
+### Target Reached / UI 
 ![Screenshot](/target-reached-screenshot.png)
-### When the target is not reached
+### When the target is not reached / UI 
 ![Screenshot](/marvin.png)
 
 ## How to use
