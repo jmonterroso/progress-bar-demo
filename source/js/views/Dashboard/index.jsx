@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import Progress from 'components/Progress/Progress';
 
 export default class Dashboard extends Component {
-  constructor() {
-    super();
-    this.handleAsyncButtonClick = this.handleAsyncButtonClick.bind(this);
-    this.handleTestButtonClick = this.handleTestButtonClick.bind(this);
-  }
   render() {
     return (
       <div className='container'>
